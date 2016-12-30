@@ -1,0 +1,36 @@
+language: rust
+sudo: false
+
+env:
+  global:
+    - secure: "..."
+
+rust:
+  - nightly
+  - beta
+  - stable
+
+before_install:
+  - pip install 'travis-cargo<0.2' --user
+  - export PATH=$HOME/.local/bin:$PATH
+
+install:
+  - travis-cargo build
+
+script:
+  - travis-cargo test
+  - travis-cargo bench
+
+after_success:
+  - travis-cargo --only stable doc
+
+deploy:
+
+  - provider: script
+    skip_cleanup: true
+    script:
+      - travis-cargo --only stable doc-upload
+      - travis-cargo coveralls --no-sudo --verify
+    on:
+      branch: master
+
