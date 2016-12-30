@@ -13,5 +13,5 @@ license = "MIT"
 build = "build.rs"
 
 [build-dependencies]
-version = "*"
+aster = "*"
 
