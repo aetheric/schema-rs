@@ -13,5 +13,10 @@ license = "MIT"
 build = "build.rs"
 
 [build-dependencies]
-aster = "*"
+aster = { version = "*", default_features = false }
+syntex_syntax = { version = "*", optional = true }
+
+[features]
+default = [ "aster/with-syntex", "syntex_syntax" ]
+nightly = []
 
