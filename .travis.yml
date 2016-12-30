@@ -1,8 +1,17 @@
 language: rust
 sudo: false
 
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - binutils-dev
+
 env:
   global:
+    - TRAVIS_CARGO_NIGHTLY_FEATURE=nightly
     - secure: FLwxizOYOT4k7KsSr6CIrDAPO/EPs36cNOptF6Kr/piaFgc+eE8p1HgjFw7Mo2khEOeP9G9blfqP/SpuNCQxUR3JBdbVPCWvCXh5qFq8WX3ZHcK8hW1UmtJkyhiU+MIxlQXygeX2p4k8ATKaQX91unPuW5WQ676dZegAwYTMUgWrDarY2drTruaUjTquqDqJwjC6CuMRM+9QplTI4mr+Ajt0/KAtrVdKNxJFqeAQC1QBWiIO5BOKfL++q7mLuUBSsQ/BwwmMI4//BWPvtkgcOtYLb0vT8ola6A+DvJrRbGVvXN0AxgbhUhaae1C9mD6+UF66l/VDnGSLr3vTIiAA/rwDEG4eNvKBUXO8BVFAMuK4+6qr2xpbO0quBeV4s0RATcTm/YbEP5S1SoVxim8ncKye8eMdxNGXVUsoZ1j0o9987BSS475YiLgIOvjPlXzSs+arzGgw5BiU22/rzzN9p9aQBOLaiR5AmCj7tss5W0CTnhpa66Nj+nVQ3Fibw/Cp0iTSmR1QDqLcLiYyZMIER3dHam0gZTwf+DBd/yiNKy4Q99Lq9yovHdqQ5EHv6o0plmrMuWCCjg8M/u5cSrdrcTrbouRTlXR7HbuSSBaZDDUmEF/Mp9RP3Y3EesfI0f84CWXHQL1gCj9EvZ4jFmVTmdlNsHDtvM/Fj2EJsB5Ak7k=
     - secure: VpMnFcavjpDEkmfC7dodd1/s42GvAaGS9/GSRFYLZlrw3mjWsu0KCxnEBKeMDuOdc3SRQSv038ejOCCPwWNBDxofeHAbBoOnsmXLi6aYC1jOst/K1WhAT0/l59mRI3lKjar68OnjDB3UUDcjprVxYSHY6f5e61vZU6Tga2Xek2EM2xHPy0udznUWH7Ojr15kx6ousq7sieW61K2sPk4Sgv3VTAQLILP3GvsvssihsQ5wWpGmbPtYUgza64rPeITx+8QwdHrjdl6/Gzuj9PFqJfFMhJoDfJ/KBbJPdjNkA3v90wyQDboYO1sLeA3hHrcVyJWT8gVsK35jre+tQRaE17Vor/GLW0kmnd/aBTSe5+BO97tmK/dS2rCXd21FvyO0pa+60GK/2pmlLVAZa7dFRM2eFNDp2M8LppLkVWjeKx7mQudlcK2Nrv7wLSl/yEHEksydr4QDiM5aQqGu0eULSn8MO9oZVujrila9kqsa22IJH1HShmIzEtDSq69lzxxh945YAJGumF1jkslGjOfHXaksB+iGlP0k0d/ivReSOOm3E5UqtX+fWZAWnrBM7ZFJy25yFSvilFSiBAxsHuea+TQB3Wc45hwgVI7QJt2ZR12LCW8m5KRmbmp353m4A91nNH9UuQYvN5MInqfl/SkdmTeOREWaFexahgzXg5AsKp0=
 
