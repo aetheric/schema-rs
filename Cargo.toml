@@ -1,0 +1,17 @@
+[package]
+name = "schema"
+version = "0.1.0"
+authors = [ "Peter Cummuskey <peterc@aetheric.co.nz>" ]
+description = "Code generation of traits and structs that mirror the schema.org definitions."
+documentation = "http://aetheric.co.nz/schema-rs"
+homepage = "http://aetheric.co.nz/schema-rs"
+repository = "https://github.com/aetheric/schema-rs"
+readme = "README.adoc"
+keywords = [ "schema", "codegen" ]
+license = "MIT"
+
+build = "build.rs"
+
+[build-dependencies]
+version = "*"
+
