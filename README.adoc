@@ -1,0 +1,5 @@
+= schema-rs
+
+image:https://travis-ci.org/aetheric/schema-rs.svg?branch=master["Build Status", link="https://travis-ci.org/aetheric/schema-rs"]
+
+
